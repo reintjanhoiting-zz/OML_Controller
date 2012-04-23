@@ -12,6 +12,6 @@
     <TextView
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:text="Bla BLa" />
+        android:text="FLartibartfast" />
 
 </LinearLayout>
