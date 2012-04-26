@@ -20,7 +20,7 @@
         </activity>
         <activity android:name=".Info" android:label="info"></activity>
         <activity android:name=".Settings" android:label="Settings"></activity>
-        <activity android:name="Start" android:label="start"></activity>
+        <activity android:name="Start" android:label="start" android:screenOrientation="landscape"></activity>
     </application>
 
 </manifest>

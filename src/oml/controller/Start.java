@@ -10,5 +10,9 @@ public class Start extends Activity {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.start);     
+        GameControls pleasureStick = new GameControls(this);
+        pleasureStick.setOnTouchListener(pleasureStick);
+        setContentView(pleasureStick);
+        
+        
 }}
