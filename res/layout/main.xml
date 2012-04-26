@@ -1,31 +1,35 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="horizontal" 
-    android:layout_width="fill_parent" 
-    android:layout_height="fill_parent">
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:baselineAligned="false"
+    android:orientation="vertical" >
 
-    <ViewFlipper
-        android:id="@+id/viewFlipper1"
-        android:layout_width="850dp"
-        android:layout_height="fill_parent" >
-    </ViewFlipper>
+    <Button
+        android:id="@+id/start_button"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        
+        android:text="Start" />
 
-    <TableLayout android:layout_width="wrap_content" android:layout_height="wrap_content">
-        <TableRow>
+    <Button
+        android:id="@+id/setting_button"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:text="Settings" />
 
-            <View
-                android:id="@+id/Right_Top"
-                android:layout_width="wrap_content"
-                android:layout_height="450dp" />
-        </TableRow>
+    <Button
+        android:id="@+id/info_button"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="fill_vertical"
+        
+        android:text="info" />
 
-        <TableRow>
+    <Button
+        android:id="@+id/exit_button"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:text="Exit" />
 
-            <View
-                android:id="@+id/Right_Bottom"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content" />
-
-        </TableRow>
-    </TableLayout>
 </LinearLayout>
