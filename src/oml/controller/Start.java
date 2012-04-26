@@ -1,5 +1,6 @@
 package oml.controller;
 
+import oml.joystick.GameControls;
 import android.app.Activity;
 import android.os.Bundle;
 

@@ -1,4 +1,4 @@
-package oml.controller;
+package oml.joystick;
 
 import oml.controller.R;
 import android.content.Context;
@@ -78,7 +78,7 @@ public class GameControls extends View implements OnTouchListener
 				_touchingPoint = new Point((int)(((MAX_RADIUS/_c) * _a + INIT_X)), ((int)((MAX_RADIUS/_c) * _b + INIT_Y)));
 
 			//get the angle
-			double angle = Math.atan2(_touchingPoint.y - INIT_Y,_touchingPoint.x - INIT_X)/(Math.PI/180);
+			//double angle = Math.atan2(_touchingPoint.y - INIT_Y,_touchingPoint.x - INIT_X)/(Math.PI/180);
 		}
 	}
 	
