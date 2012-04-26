@@ -21,7 +21,7 @@ public class Setting extends Application{
 		/**
 		  	demo for calling singleton
 		  	// Call a custom method in MySingleton
-		 	MySingleton.getInstance().customSingletonMethod();
+		 	Singleton.getInstance().customSingletonMethod();
 		
 			// Read the value of a variable in MySingleton
 			String singletonVar = MySingleton.getInstance().customVar;
