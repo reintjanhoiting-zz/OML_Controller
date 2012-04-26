@@ -1,5 +1,6 @@
 package oml.controller;
 
+import Settings.Singleton;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
@@ -13,6 +14,11 @@ public class OML_ControllerActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main);      
     
+        /**
+         * initialize singleton
+         */
+        initSingletons();
+        
     /**
      * Create start
      */
@@ -60,4 +66,11 @@ public class OML_ControllerActivity extends Activity {
     		}
     	}
     );
-}}
+    }
+    
+    protected void initSingletons()
+	{
+		// Initialize the instance of MySingleton
+		Singleton.initInstance();
+	}
+}

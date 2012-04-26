@@ -1,5 +1,6 @@
 package oml.controller;
 
+import Settings.Singleton;
 import android.app.Activity;
 import android.os.Bundle;
 import android.view.View;
@@ -10,6 +11,8 @@ public class Settings extends Activity{
     public void onCreate(Bundle savedInstanceState) {
     	super.onCreate(savedInstanceState);
         setContentView(R.layout.setting); 
+        
+        //Singleton.getInstance().IpAdress = R.id.ip_adress;
         
         Button btn = (Button) findViewById(R.id.back_button1);
         btn .setOnClickListener(new View.OnClickListener() {
