@@ -2,21 +2,17 @@ package oml.joystick;
 
 import oml.controller.R;
 import android.content.Context;
-import android.graphics.BitmapFactory;
-import android.graphics.Canvas;
-import android.graphics.Color;
-import android.graphics.Point;
+import android.graphics.*;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.View.OnTouchListener;
 
 public class GameControls extends View implements OnTouchListener
-{
-	public final int INIT_X = 450;
-	public final int INIT_Y = 250;
-	public final float MAX_RADIUS = 25;
-	public Point _touchingPoint = new Point(450,250);
-	public Point _pointerPosition = new Point(220,150);
+{	
+	public final int INIT_X = 60;
+	public final int INIT_Y = 82;
+	public final float MAX_RADIUS = 50;
+	public Point _touchingPoint = new Point(60, 82);
 	private Boolean _dragging = false;
 	
 	//pythagoreon theorem
@@ -85,13 +81,7 @@ public class GameControls extends View implements OnTouchListener
 	@Override
 	public void onDraw(Canvas canvas)
 	{
-		//white background
-		canvas.drawColor(Color.WHITE);
-		
-		//draw the joystick background
-		canvas.drawBitmap(BitmapFactory.decodeResource(this.getResources(), R.drawable.joystick_bg), 405, 205, null);
-
 		//draw the dragable joystick
-		canvas.drawBitmap(BitmapFactory.decodeResource(this.getResources(), R.drawable.joystick), _touchingPoint.x - 26, _touchingPoint.y - 26, null);
+		canvas.drawBitmap(BitmapFactory.decodeResource(this.getResources(), R.drawable.joystick), _touchingPoint.x, _touchingPoint.y, null);
 	}
 }

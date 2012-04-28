@@ -22,7 +22,7 @@ public class OML_ControllerActivity extends Activity {
     /**
      * Create start
      */
-    Button btnOpenNewActivity1 = (Button) findViewById(R.id.start_button);
+    Button btnOpenNewActivity1 = (Button) findViewById(R.id.startButton);
     btnOpenNewActivity1 .setOnClickListener(new View.OnClickListener() {
         public void onClick(View v) {
         	Intent myIntent2 = new Intent(OML_ControllerActivity.this,Start.class);
@@ -34,7 +34,7 @@ public class OML_ControllerActivity extends Activity {
     /**
      * Create info sometimes
      */
-    Button btnOpenNewActivity = (Button) findViewById(R.id.info_button);
+    Button btnOpenNewActivity = (Button) findViewById(R.id.infoButton);
     btnOpenNewActivity .setOnClickListener(new View.OnClickListener() {
     	public void onClick(View v) {
 	        Intent myIntent = new Intent(OML_ControllerActivity.this,Info.class);
@@ -46,7 +46,7 @@ public class OML_ControllerActivity extends Activity {
     /**
      * Create settings
      */
-    Button btnOpenNewActivity2 = (Button) findViewById(R.id.setting_button);
+    Button btnOpenNewActivity2 = (Button) findViewById(R.id.settingsButton);
     btnOpenNewActivity2 .setOnClickListener(new View.OnClickListener() {
     	public void onClick(View v) {
     		Intent myIntent1 = new Intent(OML_ControllerActivity.this,Settings.class);
@@ -58,7 +58,7 @@ public class OML_ControllerActivity extends Activity {
     /**
      * Exit
      */
-    Button btnOpenNewActivity3 = (Button) findViewById(R.id.exit_button);
+    Button btnOpenNewActivity3 = (Button) findViewById(R.id.exitButton);
     btnOpenNewActivity3 .setOnClickListener(new View.OnClickListener() {
     	public void onClick(View v) {
     		System.exit(1);

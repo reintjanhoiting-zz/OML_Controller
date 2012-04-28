@@ -1,31 +1,79 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/startLayout"
     android:orientation="horizontal" 
-    android:layout_width="fill_parent" 
-    android:layout_height="fill_parent">
+    android:layout_width="1024dp" 
+    android:layout_height="600dp"
+    android:padding="8dp"
+    android:background="@drawable/background">
 
-    <ViewFlipper
-        android:id="@+id/viewFlipper1"
-        android:layout_width="850dp"
-        android:layout_height="fill_parent" >
-    </ViewFlipper>
-
-    <TableLayout android:layout_width="wrap_content" android:layout_height="wrap_content">
-        <TableRow>
-
-            <View
-                android:id="@+id/Right_Top"
-                android:layout_width="wrap_content"
-                android:layout_height="450dp" />
-        </TableRow>
-
-        <TableRow>
-
-            <View
-                android:id="@+id/Right_Bottom"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content" />
-
-        </TableRow>
-    </TableLayout>
-</LinearLayout>
+    <!-- MenuBox layout, includes 4 buttons -->
+	<RelativeLayout
+	    android:id="@+id/menuBox"
+	    android:layout_width="176dp"
+	    android:layout_height="314dp"
+	    android:background="@drawable/menubox"
+	    android:paddingLeft="17dp"
+	    android:paddingRight="17dp"
+	    android:paddingTop="32dp"
+	    android:paddingBottom="32dp">
+	</RelativeLayout>
+		
+	<!-- SliderBox layout, contains sliders to control CARMEN -->
+	<RelativeLayout
+		android:id="@+id/slidersBox"
+	    android:layout_width="176dp"
+	    android:layout_height="262dp"
+	    android:background="@drawable/slidersbox"
+	    android:layout_below="@id/menuBox"
+	    android:paddingLeft="17dp"
+	    android:paddingRight="17dp"
+	    android:paddingTop="32dp"
+	    android:paddingBottom="32dp"
+	    android:layout_marginTop="8dp">
+	</RelativeLayout>
+	
+	<!-- CameraBox layout, will show a live camera feed -->
+	<RelativeLayout
+	    android:id="@+id/cameraBox"
+	    android:layout_width="640dp"
+	    android:layout_height="480dp"
+	    android:layout_toRightOf="@id/menuBox"
+	    android:layout_marginLeft="8dp">
+	</RelativeLayout>
+	
+	<!-- BottomBox layout, will show data like speed etc -->
+	<RelativeLayout
+	    android:id="@+id/bottomBox"
+	    android:layout_width="640dp"
+	    android:layout_height="104dp"
+	    android:layout_below="@id/cameraBox"
+	    android:layout_toRightOf="@id/slidersBox"
+	    android:layout_marginTop="8dp"
+	    android:layout_marginLeft="8dp"
+	    android:background="@drawable/bottombox">  
+	</RelativeLayout>
+	
+	<!-- SideBox layout, will show specified data -->
+	<RelativeLayout
+	    android:id="@+id/sideBox"
+	    android:layout_width="176dp"
+	    android:layout_height="417dp"
+	    android:layout_toRightOf="@id/cameraBox"
+	    android:layout_marginLeft="8dp"
+	    android:background="@drawable/sidebox">	    
+	</RelativeLayout>
+	
+	<!-- JoyBox layout, will handle joystick -->
+	<RelativeLayout 
+	    android:id="@+id/joyBox"
+	    android:layout_width="176dp"
+	    android:layout_height="159dp"
+	    android:layout_toRightOf="@id/bottomBox"
+	    android:layout_below="@id/sideBox"
+	    android:layout_marginLeft="8dp"
+	    android:layout_marginTop="8dp"
+	    android:background="@drawable/joybox">
+	</RelativeLayout>
+	    
+</RelativeLayout>
