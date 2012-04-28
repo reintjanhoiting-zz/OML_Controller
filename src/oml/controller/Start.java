@@ -19,8 +19,5 @@ public class Start extends Activity {
         
         View joyView = findViewById(R.id.joyBox);
         joyView.setOnTouchListener(pleasureStick);
-        
-//        RelativeLayout startLayout = (RelativeLayout)findViewById(R.id.startLayout);
-//        startLayout.addView(pleasureStick);
     }     
 }
