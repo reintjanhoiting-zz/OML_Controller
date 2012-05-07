@@ -1,18 +1,21 @@
 package oml.joystick;
 
+import java.util.Map;
+
 import oml.controller.R;
 import android.content.Context;
 import android.graphics.*;
+import android.util.AttributeSet;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.View.OnTouchListener;
 
 public class GameControls extends View implements OnTouchListener
 {	
-	public final int INIT_X = 60;
-	public final int INIT_Y = 82;
+	public final int INIT_X = 62;
+	public final int INIT_Y = 53;
 	public final float MAX_RADIUS = 50;
-	public Point _touchingPoint = new Point(60, 82);
+	public Point _touchingPoint = new Point(62, 53);
 	private Boolean _dragging = false;
 	
 	//pythagoreon theorem
@@ -23,8 +26,18 @@ public class GameControls extends View implements OnTouchListener
 	
 	public GameControls(Context context) 
 	{
-		super(context);
+		this(context, null);
 		// TODO Auto-generated constructor stub
+	}
+	
+	public GameControls(Context context, AttributeSet attrs)
+	{
+		this(context, null, 0);
+	}
+	
+	public GameControls(Context context, AttributeSet attrs, int defstyle)
+	{
+		super(context, attrs, defstyle);
 	}
 
 	public boolean onTouch(View v, MotionEvent event) 
@@ -81,7 +94,21 @@ public class GameControls extends View implements OnTouchListener
 	@Override
 	public void onDraw(Canvas canvas)
 	{
-		//draw the dragable joystick
-		canvas.drawBitmap(BitmapFactory.decodeResource(this.getResources(), R.drawable.joystick), _touchingPoint.x, _touchingPoint.y, null);
+	
+		if(!this.isInEditMode())
+		{
+			//draw the dragable joystick
+			canvas.drawBitmap(BitmapFactory.decodeResource(this.getResources(), R.drawable.joystick), _touchingPoint.x, _touchingPoint.y, null);
+		}
+		//for debugging in edit mode
+		else
+		{
+			 Paint innerCirclePaint = new Paint();
+			 innerCirclePaint.setARGB(255, 255, 255, 255);
+			 innerCirclePaint.setAntiAlias(true);
+			
+			 innerCirclePaint.setStyle(Paint.Style.FILL);
+			 canvas.drawLine(0, 0, 62, 53, innerCirclePaint);
+		}
 	}
 }
