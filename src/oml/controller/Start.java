@@ -15,9 +15,9 @@ public class Start extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.start);
         
-        GameControls pleasureStick = new GameControls(this);
+        //GameControls pleasureStick = new GameControls(this);
         
-        View joyView = findViewById(R.id.joyBox);
-        joyView.setOnTouchListener(pleasureStick);
+        GameControls joyView = (GameControls)findViewById(R.id.gameControls1);
+        joyView.setOnTouchListener(joyView);
     }     
 }

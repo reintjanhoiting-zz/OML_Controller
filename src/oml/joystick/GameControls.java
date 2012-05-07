@@ -108,7 +108,7 @@ public class GameControls extends View implements OnTouchListener
 			 innerCirclePaint.setAntiAlias(true);
 			
 			 innerCirclePaint.setStyle(Paint.Style.FILL);
-			 canvas.drawLine(0, 0, 62, 53, innerCirclePaint);
+			 canvas.drawLine(0, 0, 61, 52, innerCirclePaint);
 		}
 	}
 }
