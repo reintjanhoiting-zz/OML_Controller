@@ -1,7 +1,5 @@
 package oml.joystick;
 
-import java.util.Map;
-
 import oml.controller.R;
 import android.content.Context;
 import android.graphics.*;
@@ -23,6 +21,7 @@ public class GameControls extends View implements OnTouchListener
 	public float _b = 0;
 	public float _c = 0;
 	public float _angle = 0;
+	private MotionEvent lastEvent;
 	
 	public GameControls(Context context) 
 	{
@@ -38,6 +37,7 @@ public class GameControls extends View implements OnTouchListener
 	public GameControls(Context context, AttributeSet attrs, int defstyle)
 	{
 		super(context, attrs, defstyle);
+		this.setOnTouchListener(this);
 	}
 
 	public boolean onTouch(View v, MotionEvent event) 
@@ -47,7 +47,6 @@ public class GameControls extends View implements OnTouchListener
 		return true;
 	}
 
-	private MotionEvent lastEvent;
 	public void update(MotionEvent event)
 	{
 		if (event == null && lastEvent == null)
@@ -72,7 +71,6 @@ public class GameControls extends View implements OnTouchListener
 			_dragging = false;
 		}
 		
-
 		if ( _dragging )
 		{
 			// get the position

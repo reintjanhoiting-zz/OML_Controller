@@ -1,9 +1,7 @@
 package oml.controller;
 
-import oml.joystick.GameControls;
 import android.app.Activity;
 import android.os.Bundle;
-import android.view.View;
 
 
 public class Start extends Activity {
@@ -14,10 +12,5 @@ public class Start extends Activity {
     {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.start);
-        
-        //GameControls pleasureStick = new GameControls(this);
-        
-        GameControls joyView = (GameControls)findViewById(R.id.gameControls1);
-        joyView.setOnTouchListener(joyView);
     }     
 }
