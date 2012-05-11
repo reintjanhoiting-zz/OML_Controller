@@ -10,10 +10,10 @@ import android.view.View.OnTouchListener;
 
 public class GameControls extends View implements OnTouchListener
 {	
-	public final int INIT_X = 62;
-	public final int INIT_Y = 53;
+	public final int INIT_X = 60;
+	public final int INIT_Y = 50;
 	public final float MAX_RADIUS = 50;
-	public Point _touchingPoint = new Point(62, 53);
+	public Point _touchingPoint = new Point(60, 50);
 	private Boolean _dragging = false;
 	
 	//pythagoreon theorem
@@ -106,7 +106,7 @@ public class GameControls extends View implements OnTouchListener
 			 innerCirclePaint.setAntiAlias(true);
 			
 			 innerCirclePaint.setStyle(Paint.Style.FILL);
-			 canvas.drawLine(0, 0, 61, 52, innerCirclePaint);
+			 canvas.drawLine(0, 0, 60, 50, innerCirclePaint);
 		}
 	}
 }
